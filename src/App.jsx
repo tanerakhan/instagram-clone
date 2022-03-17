@@ -2,8 +2,7 @@ import * as React from "react"
 import { Routes, Route } from "react-router-dom"
 
 /* Components */
-import { AuthLayout } from "src/components/Layouts/Auth"
-import { DefaultLayout } from "src/components/Layouts/Default"
+import { AuthLayout, DefaultLayout } from "src/components/Layouts"
 
 /* Pages */
 import Login from "src/pages/Login"

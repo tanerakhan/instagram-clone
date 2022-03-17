@@ -2,7 +2,7 @@ import "src/assets/styles/components/default.scss"
 import { icons } from 'src/utils/icons'
 import logo from "src/assets/images/logo.png"
 
-export function DefaultLayout({ children, classes }) {
+export default function DefaultLayout({ children, classes }) {
   return (
     <div className={classes}>
       <section>

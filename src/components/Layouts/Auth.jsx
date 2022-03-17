@@ -1,6 +1,6 @@
 import 'src/assets/styles/components/authLayout.scss'
 
-export function AuthLayout({ children, classes }) {
+export default function AuthLayout({ children, classes }) {
   return (
       <div className={classes}>{children}</div>
   )
