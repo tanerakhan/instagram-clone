@@ -1,0 +1,17 @@
+export const footerLink = [
+  "Meta",
+  "About",
+  "Blog",
+  "Help",
+  "API",
+  "Privacy",
+  "Terms",
+  "Top & Accounts",
+  "Hashtags",
+  "Locations",
+  "Dance",
+  "Food & Drink",
+  "Home & Garden",
+  "Music",
+  "Visual",
+]
