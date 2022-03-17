@@ -1,5 +1,5 @@
 ### Instagram web clone
 
-- [x] Login
-- [ ] Feed
-- [ ] Register
+- [x] Login ( finished )
+- [ ] Feed ( not finished yet )
+- [ ] Register ( not finished yet )
