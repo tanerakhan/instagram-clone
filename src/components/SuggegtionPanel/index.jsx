@@ -13,7 +13,7 @@ export default function SuggegtionPanel({ suggegtions, user }) {
                 <a className="shared-flex-center" href="/">
                   <img
                     className="global-image-avatar"
-                    src={user?.user_image}
+                    src={`${import.meta.env.VITE_IMAGE_URL}/${user.user_image}`}
                     alt={user?.user_name}
                   />
                 </a>
@@ -48,7 +48,9 @@ export default function SuggegtionPanel({ suggegtions, user }) {
                     >
                       <img
                         className="global-image-avatar"
-                        src={suggegtion.user_image}
+                        src={`${import.meta.env.VITE_IMAGE_URL}/${
+                          suggegtion.user_image
+                        }`}
                         alt={suggegtion.user_name}
                       />
                     </a>
@@ -73,8 +75,8 @@ export default function SuggegtionPanel({ suggegtions, user }) {
         </div>
         <div className="suggegtion-footer-link shared-flex-content">
           <ul className="suggegtion-link-ul mb-x2">
-            {suggegtionLink?.map((link) => (
-              <li>
+            {suggegtionLink?.map((link, i) => (
+              <li key={i}>
                 <a href="/" className="footer-link-text">
                   {link}
                 </a>

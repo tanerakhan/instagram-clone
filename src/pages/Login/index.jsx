@@ -1,15 +1,10 @@
 import { useState, useEffect } from "react";
 import "src/assets/styles/components/login.scss";
-import apple from "src/assets/images/apple.png";
-import android from "src/assets/images/android.png";
-import first from "src/assets/images/1.png";
-import second from "src/assets/images/2.png";
-import third from "src/assets/images/3.png";
 import { footerLink } from "src/content";
 
 export default function Login() {
   const [show, setShow] = useState(false);
-  const [slides] = useState([first, second, third]);
+  const [slides] = useState(["1", "2", "3"]);
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClickShow = () => setShow(!show);
   const handleChangeInput = () => {};
@@ -40,14 +35,30 @@ export default function Login() {
   return (
     <div className="login-container">
       <div className="login-content">
-        <div className="login-content-image">
+        <div
+          className="login-content-image"
+          style={{
+            backgroundImage: `url(${import.meta.env.VITE_IMAGE_URL}/phone.png)`,
+          }}
+        >
           {slides.map((slide, i) => (
-            <img key={i} className={activeClass(i)} src={slide} />
+            <img
+              key={i}
+              className={activeClass(i)}
+              src={`${import.meta.env.VITE_IMAGE_URL}/${slide}.png`}
+            />
           ))}
         </div>
         <div className="login-content-form">
           <div className="login-box">
-            <div className="login-logo-area bg-spread">
+            <div
+              className="login-logo-area"
+              style={{
+                backgroundImage: `url(${
+                  import.meta.env.VITE_IMAGE_URL
+                }/spread.png)`,
+              }}
+            >
               <div className="login-images-sets"></div>
             </div>
             <div className="login-form-area">
@@ -119,10 +130,16 @@ export default function Login() {
             <div className="login-box-other-images-group">
               <div className="login-box-other-images-group-item">
                 <a href="/">
-                  <img src={apple} alt="apple" />
+                  <img
+                    src={`${import.meta.env.VITE_IMAGE_URL}/apple1.png`}
+                    alt="apple"
+                  />
                 </a>
                 <a href="/">
-                  <img src={android} alt="android" />
+                  <img
+                    src={`${import.meta.env.VITE_IMAGE_URL}/android1.png`}
+                    alt="android"
+                  />
                 </a>
               </div>
             </div>

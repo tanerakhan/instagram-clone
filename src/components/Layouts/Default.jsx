@@ -1,6 +1,5 @@
 import "src/assets/styles/components/default.scss";
 import { icons } from "src/utils/icons";
-import logo from "src/assets/images/logo.png";
 
 export default function DefaultLayout({ children, classes }) {
   return (
@@ -12,7 +11,10 @@ export default function DefaultLayout({ children, classes }) {
               <div className="header-content header-logo-content">
                 <a href="/">
                   <div className="nav-in-flex">
-                    <img src={logo} alt="Instagram logo" />
+                    <img
+                      src={`${import.meta.env.VITE_IMAGE_URL}/logo.png`}
+                      alt="Instagram logo"
+                    />
                   </div>
                 </a>
               </div>

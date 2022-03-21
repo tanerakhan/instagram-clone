@@ -27,7 +27,6 @@
         }
       }
       .login-content-image {
-        background-image: url("../../../assets/images/phone.png");
         background-position: -46px 0;
         background-size: 468px 634px;
         flex-basis: 380px;
@@ -314,9 +313,6 @@
         line-height: 16px;
       }
     }
-  }
-  .bg-spread {
-    background-image: url("../../images/spread.png");
   }
   .fb-color {
     color: var(--facebook-color);

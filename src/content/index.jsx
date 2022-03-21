@@ -1,8 +1,8 @@
 export const articles = [
   {
-    post_image: "src/assets/images/post1.jpeg",
+    post_image: "post1.jpeg",
     post_alt: "karavan kamp",
-    avatar: "src/assets/images/avatar.jpeg",
+    avatar: "avatar.jpeg",
     description: "test açıklama",
     is_active_post: true,
     tags: [
@@ -25,9 +25,9 @@ export const articles = [
     },
   },
   {
-    post_image: "src/assets/images/post2.jpeg",
+    post_image: "post2.jpeg",
     post_alt: "karavan kamp 2",
-    avatar: "src/assets/images/avatar.jpeg",
+    avatar: "avatar.jpeg",
     description: "Are you team lion 🦁 or team cheetah 🐆 ?",
     is_active_post: false,
     user: {
@@ -40,7 +40,7 @@ export const articles = [
 export const suggegtion_for_you = [
   {
     id: 1,
-    user_image: "src/assets/images/avatar.jpeg",
+    user_image: "avatar.jpeg",
     user_name: "african_animal",
     user_full_name: "African Animal",
     user_url: "/",
@@ -49,7 +49,7 @@ export const suggegtion_for_you = [
   },
   {
     id: 2,
-    user_image: "src/assets/images/avatar.jpeg",
+    user_image: "avatar.jpeg",
     user_name: "african_animal",
     user_full_name: "African Animal",
     user_url: "/",
@@ -59,7 +59,7 @@ export const suggegtion_for_you = [
 ];
 
 export const user = {
-  user_image: "src/assets/images/avatar.jpeg",
+  user_image: "avatar.jpeg",
   user_name: "tanerakhan",
   user_full_name: "Taner Akhan",
   user_url: "/",
