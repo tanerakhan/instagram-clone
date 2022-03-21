@@ -1,12 +1,14 @@
-import React from "react"
-import Post from 'src/components/Post'
-import SuggegtionPanel from 'src/components/SuggegtionPanel'
+import React from "react";
+import Post from "src/components/Post";
+import SuggegtionPanel from "src/components/SuggegtionPanel";
 
-import { articles } from 'src/pages/Feed/data'
+import { articles, suggegtion_for_you, user } from "src/content";
 
 export default function Feed() {
-  return <div className="feed-content">
+  return (
+    <div className="feed-content">
       <Post articles={articles} />
-      <SuggegtionPanel />
-  </div>
+      <SuggegtionPanel user={user} suggegtions={suggegtion_for_you} />
+    </div>
+  );
 }

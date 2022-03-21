@@ -1,6 +1,6 @@
-import "src/assets/styles/components/default.scss"
-import { icons } from 'src/utils/icons'
-import logo from "src/assets/images/logo.png"
+import "src/assets/styles/components/default.scss";
+import { icons } from "src/utils/icons";
+import logo from "src/assets/images/logo.png";
 
 export default function DefaultLayout({ children, classes }) {
   return (
@@ -19,18 +19,32 @@ export default function DefaultLayout({ children, classes }) {
               <div className="header-content header-search-content">
                 <div className="header-search-item">
                   <span>{icons.search}</span>
-                  <input type="text" />
+                  <input type="text" placeholder="Search" />
                 </div>
               </div>
               <div className="header-content header-nav-content">
                 <div className="nav-in-flex header-nav-icon">
                   <ul className="shared-flex-content">
-                    <li><a href="/">{icons.home}</a></li>
-                    <li><a href="/">{icons.message}</a></li>
-                    <li><a href="/">{icons.add}</a></li>
-                    <li><a href="/">{icons.explore}</a></li>
-                    <li><a href="/">{icons.like}</a></li>
-                    <li className="global-user-avatar"><a className="shared-flex-center" href="/">T</a></li>
+                    <li>
+                      <a href="/">{icons.home}</a>
+                    </li>
+                    <li>
+                      <a href="/">{icons.message}</a>
+                    </li>
+                    <li>
+                      <a href="/">{icons.add}</a>
+                    </li>
+                    <li>
+                      <a href="/">{icons.explore}</a>
+                    </li>
+                    <li>
+                      <a href="/">{icons.like}</a>
+                    </li>
+                    <li className="global-user-avatar">
+                      <a className="shared-flex-center" href="/">
+                        T
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -40,5 +54,5 @@ export default function DefaultLayout({ children, classes }) {
         <main>{children}</main>
       </section>
     </div>
-  )
+  );
 }

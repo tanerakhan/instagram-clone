@@ -13,7 +13,25 @@
   --facebook-color: #385185;
   --header-height: 60px;
   --in-feed-story-item-padding: 14px;
+  --footer-link-color: #c7c7c7;
 }
+
+::placeholder {
+  font-weight: 100;
+  color: var(--input-hover-text-color);
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-weight: 100;
+  color: var(--input-hover-text-color);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-weight: 100;
+  color: var(--input-hover-text-color);
+}
+
 a {
   text-decoration: none;
   display: block;

@@ -11,21 +11,15 @@
     .suggegtion-space {
       height: auto;
       margin-bottom: 10px;
-      margin-top: 18px;
+      margin-top: 16px;
+      padding: 0 0 0 3px;
       .suggegtion-user-switch-line {
         width: 100%;
         .suggegtion-user-info {
+          flex-flow: column;
+          width: 100%;
           * {
             display: block;
-          }
-          .suggegtion-user-fullname {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            font-size: 14px;
-            line-height: 18px;
-            font-weight: 400;
-            color: var(--input-hover-text-color);
           }
         }
         .suggegtion-user-switch {
@@ -34,6 +28,68 @@
             line-height: 16px;
           }
         }
+        .suggegtion-user-small {
+          display: flex;
+          flex-flow: column;
+          width: 100%;
+          min-width: 190px;
+        }
+      }
+    }
+    .suggegtion-for-you {
+      .suggegtion-for-you-in {
+        span {
+          font-weight: 600;
+          font-size: 15px;
+        }
+      }
+      .suggegtion-for-you-action {
+        padding-right: 10px;
+        a {
+          color: var(--primary-text-color);
+          cursor: pointer;
+          font-size: 12px;
+          line-height: 16px;
+          margin: -2px 0 -3px;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .suggegtion-for-you-container {
+      margin-bottom: 25px;
+    }
+    .suggegtion-footer-link {
+      flex-direction: column;
+      .suggegtion-link-ul {
+        li {
+          display: inline-block;
+          a.footer-link-text {
+            &:after {
+              content: "\00B7";
+              margin: 0 0.25em 0 0.25em;
+            }
+          }
+          &:last-child {
+            a {
+              &:after {
+                content: "";
+                margin: 0 0 0 0.25em;
+              }
+            }
+          }
+        }
+      }
+      .footer-link-text {
+        color: var(--footer-link-color);
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: none;
+        line-height: 16px;
+      }
+      .suggegtion-footer-copyright {
+        display: block;
+        width: 100%;
       }
     }
   }

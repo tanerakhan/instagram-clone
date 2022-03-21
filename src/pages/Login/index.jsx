@@ -1,41 +1,41 @@
-import { useState, useEffect } from "react"
-import "src/assets/styles/components/login.scss"
-import apple from "src/assets/images/apple.png"
-import android from "src/assets/images/android.png"
-import first from "src/assets/images/1.png"
-import second from "src/assets/images/2.png"
-import third from "src/assets/images/3.png"
-import { footerLink } from "./constant"
+import { useState, useEffect } from "react";
+import "src/assets/styles/components/login.scss";
+import apple from "src/assets/images/apple.png";
+import android from "src/assets/images/android.png";
+import first from "src/assets/images/1.png";
+import second from "src/assets/images/2.png";
+import third from "src/assets/images/3.png";
+import { footerLink } from "src/content";
 
 export default function Login() {
-  const [show, setShow] = useState(false)
-  const [slides] = useState([first, second, third])
-  const [slideIndex, setSlideIndex] = useState(0)
-  const handleClickShow = () => setShow(!show)
-  const handleChangeInput = () => {}
-  let timeout
+  const [show, setShow] = useState(false);
+  const [slides] = useState([first, second, third]);
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClickShow = () => setShow(!show);
+  const handleChangeInput = () => {};
+  let timeout;
   const loopImages = () => {
     if (slideIndex < slides.length) {
-      timeout = setTimeout(() => setSlideIndex(slideIndex + 1), 2000)
+      timeout = setTimeout(() => setSlideIndex(slideIndex + 1), 2000);
     } else {
-      setSlideIndex(0)
+      setSlideIndex(0);
     }
-  }
+  };
 
   const activeClass = (i) => {
     if (i === slideIndex) {
-      return "login-item-image login-item-image-active"
+      return "login-item-image login-item-image-active";
     } else if (i !== slideIndex) {
-      return "login-item-image login-item-image-default"
+      return "login-item-image login-item-image-default";
     }
-  }
+  };
 
   useEffect(() => {
-    loopImages()
+    loopImages();
     return () => {
-      clearTimeout(timeout)
-    }
-  }, [slideIndex])
+      clearTimeout(timeout);
+    };
+  }, [slideIndex]);
 
   return (
     <div className="login-container">
@@ -145,5 +145,5 @@ export default function Login() {
         </div>
       </div>
     </div>
-  )
+  );
 }
