@@ -4,7 +4,7 @@ import { icons } from "src/utils/icons";
 export default function DefaultLayout({ children, classes }) {
   return (
     <div className={classes}>
-      <section>
+      <section className="section-layout">
         <header className="shared-box-model">
           <div className="in-header-sticky shared-box-model">
             <div className="nav-items">

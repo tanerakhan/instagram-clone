@@ -118,3 +118,19 @@
   font-weight: 400;
   margin-top: 1px;
 }
+.global-text-link {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.suggegtion-user-info {
+  flex-flow: column;
+  width: 100%;
+  * {
+    display: block;
+  }
+}
+.flex-custom-column {
+  flex-flow: column;
+  width: 100%;
+}

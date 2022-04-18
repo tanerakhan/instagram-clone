@@ -1,7 +1,8 @@
 import "src/assets/styles/components/suggegtion.scss";
 import PropTypes from "prop-types";
-import { capitalize, seperator } from "src/utils/helpers";
 import { suggegtionLink } from "src/content";
+import Preview from "src/components/Preview";
+
 export default function SuggegtionPanel({ suggegtions, user }) {
   return (
     <div className="feed-suggegtion">
@@ -38,39 +39,7 @@ export default function SuggegtionPanel({ suggegtions, user }) {
         </div>
         <div className="suggegtion-for-you-container">
           {suggegtions?.map((suggegtion, i) => (
-            <div className="shared-flex-content suggegtion-space" key={i}>
-              <div className="suggegtion-user-switch-line shared-flex-content">
-                <div className="suggegtion-avatar">
-                  <div className="global-user-avatar">
-                    <a
-                      className="shared-flex-center"
-                      href={suggegtion.user_url}
-                    >
-                      <img
-                        className="global-image-avatar"
-                        src={`${import.meta.env.VITE_IMAGE_URL}/${
-                          suggegtion.user_image
-                        }`}
-                        alt={suggegtion.user_name}
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div className="suggegtion-user-info suggegtion-user-small">
-                  <span className="global-text-username">
-                    {suggegtion.user_name}
-                  </span>
-                  <span className="global-sub-text suggegtion-sub-text-for-you">
-                    {capitalize(suggegtion.status)}{" "}
-                    {suggegtion.status === "new" ? "" : "by"}{" "}
-                    {seperator(suggegtion.who_is_following)}
-                  </span>
-                </div>
-                <div className="suggegtion-user-switch">
-                  <button className="p-0 blue-button">follow</button>
-                </div>
-              </div>
-            </div>
+            <Preview key={i} index={i} suggegtion={suggegtion} />
           ))}
         </div>
         <div className="suggegtion-footer-link shared-flex-content">
