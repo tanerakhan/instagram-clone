@@ -12,7 +12,7 @@ export default function DefaultLayout({ children, classes }) {
                 <a href="/">
                   <div className="nav-in-flex">
                     <img
-                      src={`${import.meta.env.VITE_IMAGE_URL}/logo.png`}
+                      src={`${import.meta.env.VITE_IMAGE_URL}/logo.svg`}
                       alt="Instagram logo"
                     />
                   </div>
